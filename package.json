@@ -1,0 +1,16 @@
+{
+  "name": "css-loaders",
+  "version": "1.0.0",
+  "description": "Package of loaders make with Html and css only (Any Javscript)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steeve VERDIEU (Flat-Pixels)",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.9.4"
+  }
+}

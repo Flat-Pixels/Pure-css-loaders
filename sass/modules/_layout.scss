@@ -1,0 +1,42 @@
+/*------------------------------------*\
+  #SECTION-CONTAINER
+\*------------------------------------*/
+
+.wrap{
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+
+
+/*------------------------------------*\
+  #SECTION-LOADERS GROUP
+\*------------------------------------*/
+
+.load-group{
+  position: relative;
+
+  padding: 50px;
+}
+
+.load-group--primary{
+  background: $primary-color;
+}
+
+.load-group--secondary{
+  background: $secondary-color;
+}
+
+.load-group--third{
+  background: $third-color;
+}
+
+.load-group--thfour{
+  background: $thfour-color;
+}
+
+.load-group--thfive{
+  background: $thfive-color;
+}

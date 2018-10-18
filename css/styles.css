@@ -1,0 +1,55 @@
+/*------------------------------------*\
+  #SECTION-RESET HMTL ELEMENTS
+\*------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+/*------------------------------------*\
+  #SECTION-CONTAINER
+\*------------------------------------*/
+.wrap {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+}
+
+/*------------------------------------*\
+  #SECTION-LOADERS GROUP
+\*------------------------------------*/
+.load-group {
+  position: relative;
+  padding: 50px;
+}
+
+.load-group--primary {
+  background: #16a085;
+}
+
+.load-group--secondary {
+  background: #e74c3c;
+}
+
+.load-group--third {
+  background: #34495e;
+}
+
+.load-group--thfour {
+  background: #2c3e50;
+}
+
+.load-group--thfive {
+  background: #c0392b;
+}
