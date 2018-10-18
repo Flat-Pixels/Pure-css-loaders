@@ -5,3 +5,15 @@
 @keyframes spin {
   to { transform: rotate( 360deg ); }
 }
+
+/*------------------------------------*\
+  #SECTION-BARS ANIMATION
+\*------------------------------------*/
+
+@keyframes bar-grow-up {
+  from { height: 60px; }
+}
+
+@keyframes bar-opaq {
+  from { opacity: 0; transform: scaleY(1.5); }
+}

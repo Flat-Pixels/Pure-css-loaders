@@ -103,10 +103,104 @@ body {
 }
 
 /*------------------------------------*\
+  #SECTION-BARS LOADERS
+\*------------------------------------*/
+/**
+ * The loader bars main container contains 5 bars
+ * The main conatiner width depends on :
+ *
+ * 1) The bars width
+ * 2) The white spaces between them
+ */
+.loader-bars {
+  width: 90px;
+  font-size: 0;
+}
+
+/**
+* Default bars loader style
+*/
+.loader-bars__bar {
+  position: absolute;
+  width: 10px;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  animation: bar-grow-up 1s linear infinite;
+}
+
+.loader-bars__bar:nth-child(2) {
+  left: 20px;
+  animation-delay: .1s;
+}
+
+.loader-bars__bar:nth-child(3) {
+  left: 40px;
+  animation-delay: .2s;
+}
+
+.loader-bars__bar:nth-child(4) {
+  left: 60px;
+  animation-delay: .3s;
+}
+
+.loader-bars__bar:nth-child(5) {
+  left: 80px;
+  animation-delay: .4s;
+}
+
+/**
+* Transparency bar loader style
+* It bases on the: Default bars loader style
+*/
+.loader-bars--opaq .loader-bars__bar {
+  height: 60px;
+  opacity: 1;
+  animation: bar-opaq 1s linear infinite;
+}
+
+.loader-bars--opaq .loader-bars__bar:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.loader-bars--opaq .loader-bars__bar:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.loader-bars--opaq .loader-bars__bar:nth-child(3) {
+  animation-delay: .2s;
+}
+
+.loader-bars--opaq .loader-bars__bar:nth-child(4) {
+  animation-delay: .3s;
+}
+
+.loader-bars--opaq .loader-bars__bar:nth-child(5) {
+  animation-delay: .4s;
+}
+
+/*------------------------------------*\
   #SECTION-SPIN ANIMATION
 \*------------------------------------*/
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/*------------------------------------*\
+  #SECTION-BARS ANIMATION
+\*------------------------------------*/
+@keyframes bar-grow-up {
+  from {
+    height: 60px;
+  }
+}
+
+@keyframes bar-opaq {
+  from {
+    opacity: 0;
+    transform: scaleY(1.5);
   }
 }
