@@ -22,34 +22,91 @@ body {
 \*------------------------------------*/
 .wrap {
   position: relative;
-  width: 960px;
+  width: 100%;
+  max-width: 560px;
   margin: 0 auto;
+  padding: 0 30px;
+}
+
+/*------------------------------------*\
+  #SECTION-LOAD CONTAINER GROUP
+\*------------------------------------*/
+.section {
+  position: relative;
+  padding: 50px;
+}
+
+.section--primary {
+  background: #16a085;
+}
+
+.section--secondary {
+  background: #e74c3c;
+}
+
+.section--third {
+  background: #34495e;
+}
+
+.section--thfour {
+  background: #2c3e50;
+}
+
+.section--thfive {
+  background: #c0392b;
 }
 
 /*------------------------------------*\
   #SECTION-LOADERS GROUP
 \*------------------------------------*/
-.load-group {
+.loaders-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*------------------------------------*\
+  #SECTION-DEFAULT LOADERS STYLE
+\*------------------------------------*/
+.loader {
   position: relative;
-  padding: 50px;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
 }
 
-.load-group--primary {
-  background: #16a085;
+/*------------------------------------*\
+  #SECTION-SPINNER LOADERS
+\*------------------------------------*/
+.loader-spinner {
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.3);
 }
 
-.load-group--secondary {
-  background: #e74c3c;
+.loader-spinner:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
 }
 
-.load-group--third {
-  background: #34495e;
+.loader-spinner--transparent {
+  border-color: transparent;
 }
 
-.load-group--thfour {
-  background: #2c3e50;
-}
-
-.load-group--thfive {
-  background: #c0392b;
+/*------------------------------------*\
+  #SECTION-SPIN ANIMATION
+\*------------------------------------*/
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

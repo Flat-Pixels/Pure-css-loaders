@@ -4,39 +4,53 @@
 
 .wrap{
   position: relative;
-  width: 960px;
+  width: 100%;
+  max-width: 560px;
+
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 
 
 
 /*------------------------------------*\
-  #SECTION-LOADERS GROUP
+  #SECTION-LOAD CONTAINER GROUP
 \*------------------------------------*/
 
-.load-group{
+.section{
   position: relative;
 
   padding: 50px;
 }
 
-.load-group--primary{
+.section--primary{
   background: $primary-color;
 }
 
-.load-group--secondary{
+.section--secondary{
   background: $secondary-color;
 }
 
-.load-group--third{
+.section--third{
   background: $third-color;
 }
 
-.load-group--thfour{
+.section--thfour{
   background: $thfour-color;
 }
 
-.load-group--thfive{
+.section--thfive{
   background: $thfive-color;
+}
+
+/*------------------------------------*\
+  #SECTION-LOADERS GROUP
+\*------------------------------------*/
+
+.loaders-group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
