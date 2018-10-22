@@ -66,6 +66,10 @@ body {
   flex-wrap: wrap;
 }
 
+.--last {
+  margin: 0 !important;
+}
+
 /*------------------------------------*\
   #SECTION-DEFAULT LOADERS STYLE
 \*------------------------------------*/
@@ -181,6 +185,77 @@ body {
 }
 
 /*------------------------------------*\
+  #SECTION-DOTS LOADERS
+\*------------------------------------*/
+/**
+ * The loader DOT main container contains 5 dots
+ * The main conatiner width depends on :
+ *
+ * 1) The dots width
+ * 2) The white spaces between them
+ */
+.loader-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+}
+
+/*
+* Default dots loader
+*/
+.loader-dot__bar {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  background-color: #16a085;
+  animation: dot-pomp-up .6s ease-in-out alternate infinite;
+}
+
+.loader-dot__bar:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.loader-dot__bar:nth-child(3) {
+  animation-delay: .2s;
+}
+
+.loader-dot__bar:nth-child(4) {
+  animation-delay: .3s;
+}
+
+.loader-dot__bar:nth-child(5) {
+  animation-delay: .4s;
+}
+
+/*
+* Loader with dart trnasform to square
+* and circle:
+*
+* It bases on the defaulot dots loader
+*/
+.loader-dot--round .loader-dot__bar {
+  animation: dot-rounded 1.5s ease-in-out infinite;
+}
+
+.loader-dot--round .loader-dot__bar:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.loader-dot--round .loader-dot__bar:nth-child(3) {
+  animation-delay: .2s;
+}
+
+.loader-dot--round .loader-dot__bar:nth-child(4) {
+  animation-delay: .3s;
+}
+
+.loader-dot--round .loader-dot__bar:nth-child(5) {
+  animation-delay: .4s;
+}
+
+/*------------------------------------*\
   #SECTION-SPIN ANIMATION
 \*------------------------------------*/
 @keyframes spin {
@@ -202,5 +277,22 @@ body {
   from {
     opacity: 0;
     transform: scaleY(1.5);
+  }
+}
+
+/*------------------------------------*\
+  #SECTION-DOTS ANIMATION
+\*------------------------------------*/
+@keyframes dot-pomp-up {
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes dot-rounded {
+  to {
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #16a085;
   }
 }

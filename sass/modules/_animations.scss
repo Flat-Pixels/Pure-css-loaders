@@ -6,6 +6,9 @@
   to { transform: rotate( 360deg ); }
 }
 
+
+
+
 /*------------------------------------*\
   #SECTION-BARS ANIMATION
 \*------------------------------------*/
@@ -16,4 +19,23 @@
 
 @keyframes bar-opaq {
   from { opacity: 0; transform: scaleY(1.5); }
+}
+
+
+
+
+/*------------------------------------*\
+  #SECTION-DOTS ANIMATION
+\*------------------------------------*/
+
+@keyframes dot-pomp-up {
+  to { transform: translateY( 20px ); }
+}
+
+@keyframes dot-rounded {
+  to {
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid $primary-color;
+  }
 }

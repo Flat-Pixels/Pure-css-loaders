@@ -1,3 +1,5 @@
+.--last { margin: 0 !important }
+
 /*------------------------------------*\
   #SECTION-DEFAULT LOADERS STYLE
 \*------------------------------------*/
@@ -128,4 +130,69 @@
   &:nth-child(5) {
     animation-delay: .4s;
   }
+}
+
+
+
+
+/*------------------------------------*\
+  #SECTION-DOTS LOADERS
+\*------------------------------------*/
+
+/**
+ * The loader DOT main container contains 5 dots
+ * The main conatiner width depends on :
+ *
+ * 1) The dots width
+ * 2) The white spaces between them
+ */
+
+.loader-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+}
+
+/*
+* Default dots loader
+*/
+.loader-dot__bar {
+  display: block;
+  width: 15px;
+  height: 15px;
+
+  margin-right: 10px;
+
+  background-color: $primary-color;
+
+  animation: dot-pomp-up .6s ease-in-out alternate infinite;
+
+  &:nth-child(2) { animation-delay: .1s; }
+
+  &:nth-child(3) { animation-delay: .2s; }
+
+  &:nth-child(4) { animation-delay: .3s; }
+
+  &:nth-child(5) { animation-delay: .4s; }
+}
+
+/*
+* Loader with dart trnasform to square
+* and circle:
+*
+* It bases on the defaulot dots loader
+*/
+.loader-dot--round .loader-dot__bar {
+
+  animation: dot-rounded 1.5s ease-in-out infinite;
+
+  &:nth-child(2) { animation-delay: .1s; }
+
+  &:nth-child(3) { animation-delay: .2s; }
+
+  &:nth-child(4) { animation-delay: .3s; }
+
+  &:nth-child(5) { animation-delay: .4s; }
 }
