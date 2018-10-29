@@ -102,6 +102,9 @@ body {
   animation: spin 1s linear infinite;
 }
 
+/*
+* Spinner with transparent circle
+*/
 .loader-spinner--transparent {
   border-color: transparent;
 }
