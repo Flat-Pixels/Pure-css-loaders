@@ -196,3 +196,43 @@
 
   &:nth-child(5) { animation-delay: .4s; }
 }
+
+
+
+
+/*------------------------------------*\
+  #SECTION-LOADER SQUARE
+\*------------------------------------*/
+
+/*
+* Default square style
+*/
+.loader-square {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid $primary-color;
+
+  transform: rotate( 0deg );
+  animation: rot-square 1s cubic-bezier( 1, -0.38, 1, 1) alternate infinite;
+}
+
+/*
+* Imbricated square
+*/
+.loader-square--imbricated {
+  animation: rot-imbricated 1s cubic-bezier(0, 0, 1, -0.37) infinite;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+
+    border: 1px solid $secondary-color;
+
+    animation: rot-imbricated-reverse 2s cubic-bezier(0, 0, 1, -0.37) infinite;
+  }
+}

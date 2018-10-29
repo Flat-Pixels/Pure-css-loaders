@@ -256,6 +256,38 @@ body {
 }
 
 /*------------------------------------*\
+  #SECTION-LOADER SQUARE
+\*------------------------------------*/
+/*
+* Default square style
+*/
+.loader-square {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #16a085;
+  transform: rotate(0deg);
+  animation: rot-square 1s cubic-bezier(1, -0.38, 1, 1) alternate infinite;
+}
+
+/*
+* Imbricated square
+*/
+.loader-square--imbricated {
+  animation: rot-imbricated 1s cubic-bezier(0, 0, 1, -0.37) infinite;
+}
+
+.loader-square--imbricated::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 1px solid #e74c3c;
+  animation: rot-imbricated-reverse 2s cubic-bezier(0, 0, 1, -0.37) infinite;
+}
+
+/*------------------------------------*\
   #SECTION-SPIN ANIMATION
 \*------------------------------------*/
 @keyframes spin {
@@ -294,5 +326,40 @@ body {
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid #16a085;
+  }
+}
+
+/*------------------------------------*\
+  #SECTION-SQUARE ANIMATION
+\*------------------------------------*/
+@keyframes rot-square {
+  to {
+    transform: rotate(135deg);
+    background-color: #e74c3c;
+    border: none;
+  }
+}
+
+@keyframes rot-imbricated {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-135deg);
+  }
+}
+
+@keyframes rot-imbricated-reverse {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(135deg);
   }
 }
