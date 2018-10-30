@@ -42,7 +42,7 @@ gulp.task( 'clean-build', function() {
 * Task build the production version
 */
 gulp.task( 'build', [ 'clean-build', 'autoprefixer' ], function() {
-  return gulp.src( [ './css/**/*.css', './index.html' ] )
+  return gulp.src( [ './css/**/*.css', './index.html' ], { base: './' } )
         .pipe( gulp.dest( './build' ) );
 });
 
